@@ -1,16 +1,20 @@
-.somethingFishy {
-    font-family: 'Montserrat', sans-serif;
+body {
+    background-color:salmon;
 }
 
-body index.html{
-    background-color:lemonchiffon;
+.storelocations{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   background-color: whitesmoke;
+   color: black;
+   font-size: medium;
 }
-sales{
-    background-color: lemonchiffon;
-    color: lemonchiffon;
-    font-family: 'Montserrat', sans-serif;
- }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
