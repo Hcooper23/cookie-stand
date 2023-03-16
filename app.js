@@ -10,10 +10,11 @@ function generateBetween(min, max) {
 }
 
 const sales = [];
-// const tableBodyEl = document.getElementById('cookieData');
+const tableBodyEl = document.getElementById('cookieData');
 const thead = document.getElementById('thead');
 const tbody = document.getElementById('tbody');
 const tfoot = document.getElementById('tfoot');
+const formEl = document.getElementById('form');
 
 function tableCookie(name, min, max, avg) {
   this.city = name;
@@ -76,7 +77,7 @@ function drawHeader() {
   thead.appendChild(row);
 }
 
-drawHeader()
+drawHeader();
 
 // Total Function
 tableCookie.prototype.drawFooter = function () {
@@ -122,7 +123,27 @@ const lima = new tableCookie('Lima', 2, 16, 4.);
 lima.generateCookiesPerHour();
 lima.drawRow();
 lima.drawFooter();
-// This above Calls the total for all times????
+
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
+formEl.addEventListener('submit', handleSubmit);
+
+let { city, avgPurchase, minHourly, maxHourly } = event.target;
+
+console.log(city, avgPurchase, minHourly, maxHourly);
+
+let newLocations = new location(
+  city.value,
+  avgPurchase.value,
+  minHourly.value,
+  maxHourly.value
+);
+
+this.store.push(newLocations);
+newLocations.drawRow();
+displayTable();
 
 // let operatingHours = function(){
 //   let headerRow = document.createElement('tr');
