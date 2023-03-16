@@ -1,5 +1,12 @@
 body {
     background-color:salmon;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
 }
 
 .storelocations{
@@ -52,4 +59,21 @@ table tr:nth-child(even) {
 }
 
 /* // Location on html */
+
+footer {
+    background-color: rgba(111, 196, 159, 0.643);
+    border: 5px solid #090000;
+    padding: 8px;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+footer :first-child{
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    text-align: center;
+}
 
