@@ -80,9 +80,9 @@ function drawHeader() {
 drawHeader();
 
 // Total Function
-tableCookie.prototype.drawFooter = function () {
+function drawFooter () {
   const totalRow = document.createElement('tr');
-  tbody.appendChild(totalRow);
+  tfoot.appendChild(totalRow);
   const totalCell1 = document.createElement('td');
   totalCell1.textContent = 'Total';
   totalRow.appendChild(totalCell1);
@@ -102,6 +102,20 @@ tableCookie.prototype.drawFooter = function () {
   totalRow.appendChild(totalCell3);
 };
 
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log('handleSubmi');
+  let city = event.target.city.value;
+  let avgPurchase = event.target.avgPurchase.value;
+  let minHourly = event.target.minHourly.value;
+  let maxHourly = event.target.maxHourly.value;
+  console.log(event.target);
+  console.log(city, avgPurchase, minHourly, maxHourly);
+  const newLocation = new tableCookie (city, avgPurchase, minHourly, maxHourly);
+  newLocation.generateCookiesPerHour();
+  newLocation.drawRow();
+  thead.appendChild(row);
+}
 
 const seattle = new tableCookie('Seattle', 23, 65, 6.3);
 seattle.generateCookiesPerHour();
@@ -122,28 +136,35 @@ paris.drawRow();
 const lima = new tableCookie('Lima', 2, 16, 4.);
 lima.generateCookiesPerHour();
 lima.drawRow();
-lima.drawFooter();
-
-function handleSubmit(event) {
-  event.preventDefault();
-}
 
 formEl.addEventListener('submit', handleSubmit);
 
-let { city, avgPurchase, minHourly, maxHourly } = event.target;
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = event.target.city.value;
+  let avgPurchase = event.target.avgPurchase.value;
+  let minHourly = event.target.minHourly.value;
+  let maxHourly = event.target.maxHourly.value;
+  const newLocation = new tableCookie (city, avgPurchase, minHourly, maxHourly);
+  newLocation.generateCookiesPerHour();
+  newLocation.drawRow();
+  tfoot.innerHTML = '';
+  drawFooter();
+}
 
-console.log(city, avgPurchase, minHourly, maxHourly);
+drawFooter();
 
-let newLocations = new location(
-  city.value,
-  avgPurchase.value,
-  minHourly.value,
-  maxHourly.value
-);
 
-this.store.push(newLocations);
-newLocations.drawRow();
-displayTable();
+// let newLocations = new location(
+//   city.value,
+//   avgPurchase.value,
+//   minHourly.value,
+//   maxHourly.value
+// );
+
+// this.store.push(newLocations);
+// newLocations.drawRow();
+// displayTable();
 
 // let operatingHours = function(){
 //   let headerRow = document.createElement('tr');

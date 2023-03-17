@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="css/salestyle.css">
+<link rel="resetstylesheet" href="css/reset.css">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sales</title>
     <link rel="stylesheet" href="css/style.css">
+    <header>
+        <nav>
+            <img src="Images/chinook (Lab08B).jpeg" alt="logo" title="logo">
+            <ul>
+                <a><li class="homeHyperlink"><a href="index.html">Home</a></li></a>
+                <a><li class="salesDataHyperlink"> <a href="sales.html">Sales Data</a></li></a>
+                <a><li class="storesHyperlink"><a href="stores.html"> Locations</a></li></a>
+                <a><li class="contacUsHyperlink"><a href="contact.html">Contact Us</a></li></a>
+            </ul>
+        </nav>
+    </header>
 </head>
 
 <body>
@@ -14,12 +27,12 @@
         <h1>Sales Table</h1>
     </header>
     <Div>
-        <form id = "form">
-            <input class="city" type="City" name="City" placeholder="City">
-            <input class="avgPurchase" type="avgPurchase" name="avgPurchase" placeholder="Average Purchase">
-            <input class="minCustomer" type="minCustomer" name="minCustomer" placeholder="Min Customer">
-            <input class="maxCustomer" type="maxCustomer" name="maxCustomer" placeholder="Max Customer">
-            <input class="submitButton" type="submit" name="submit" value="Submit" id="submit">
+        <form id="form">
+            <input class="city" type="text" name="city" placeholder="City">
+            <input class="avgPurchase" type="number" name="avgPurchase" placeholder="Average Purchase">
+            <input class="minCustomer" type="number" name="minHourly" placeholder="Min Customer">
+            <input class="maxCustomer" type="number" name="maxHourly" placeholder="Max Customer">
+            <button class="submitButton" type="submit" id="submit"> Submit </button>
         </form>
     </Div>
     <table id="cookieTable">
@@ -28,6 +41,14 @@
         <tfoot id="tfoot"></tfoot>
     </table>
     <script src="app.js"></script>
+    <img class="salmoncookie" src="Images/frosted-cookie (Lab08B).jpeg" alt="Frosted Cookie Samples">
+    <img class="cookiecutter" src="Images/cutter (Lab08B).jpeg" alt="Salmon Cutter">
+    <img class="schoolfish" src="Images/fish (Lab08B).jpeg" alt="School Of Fish">
 </body>
-
+<footer>
+    <p> Contact Information </p>
+    <p> Phone Number: 675-454-9789</p>
+    <p> Email: slamonbamcookies@gmail.com</p>
+    <p>10321 W McDowell Rd Seattle, WA 98451</p>
+</footer>
 </html>

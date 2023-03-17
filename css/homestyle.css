@@ -1,0 +1,43 @@
+header nav {
+    color: grey !important;
+    font-weight: bold;
+    display: flex;
+    padding: auto;
+    border-radius: 20%;
+   
+}
+
+nav img {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid rgb(22, 2, 2);
+    border-color: rgb(18, 1, 1);
+    max-height: 100px;
+}
+
+header li {
+    display: inline;
+    line-height: 50px;
+    margin-left: 50px
+}
+
+.family{
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.salmonphoto{
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
+}
+footer {
+    background-color: rgba(111, 196, 159, 0.643);
+    border: 5px solid #090000;
+    padding: 8px;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
