@@ -46,13 +46,3 @@ body div p {
     padding-bottom:  10px;
     padding-top: 10px;
 }
-
-footer {
-    background-color: rgba(111, 196, 159, 0.643);
-    border: 5px solid #090000;
-    padding: 8px;
-    margin: 0;
-    font-size: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
